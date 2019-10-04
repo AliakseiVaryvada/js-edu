@@ -5,10 +5,14 @@
  * @returns number of weeks needed for finish education
  */
 
-function getTimeForEducation(focus, knowsProgramming, speedConfig) {
+module.exports = function getTimeForEducation(
+    focus = "family",
+    knowsProgramming = true,
+    config = { family: 4 }
+) {
     if (knowsProgramming == true) {
-        return 800 / speedConfig[focus];
+        return 800 / config[focus];
     } else {
-        return 500 / speedConfig[focus];
+        return 500 / config[focus];
     }
-}
+};
