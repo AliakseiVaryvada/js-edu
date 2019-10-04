@@ -11,8 +11,8 @@ module.exports = function getTimeForEducation(
     config = { family: 4 }
 ) {
     if (knowsProgramming == true) {
-        return 800 / config[focus];
+        return Math.celi(800 / config[focus]);
     } else {
-        return 500 / config[focus];
+        return Math.celi(500 / config[focus]);
     }
 };
